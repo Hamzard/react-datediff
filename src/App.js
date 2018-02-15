@@ -5,8 +5,6 @@ import 'react-dates/initialize'
 import 'react-dates/lib/css/_datepicker.css'
 // datepicker component
 import { DateRangePicker } from 'react-dates'
-// function that calculates difference in days
-import { dateDiffInDays } from './dateDiff'
 
 class App extends Component {
   constructor(props) {
@@ -20,7 +18,7 @@ class App extends Component {
   }
 
   handleClick() {
-    var diff = dateDiffInDays(this.state.startDate, this.state.endDate)
+    var diff = this.state.endDate.diff(this.state.startDate,'days')
     this.setState({
       count: 'Timespan: '+ diff + ' day(s)'
     })
