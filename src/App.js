@@ -18,7 +18,7 @@ class App extends Component {
   }
 
   // TODO
-  // Clear the count result after the user clear both date input fields
+  // Clear the count result after the user clears both date input fields
 
   handleClick() {
     var diff = this.state.endDate.diff(this.state.startDate,'days')
